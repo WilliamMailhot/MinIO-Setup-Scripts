@@ -9,8 +9,8 @@ RED='\033[0;31m'
 NC='\033[0m'
 
 # Variables
-USER="root"
-PASS="root"
+USER="administrator"
+PASS="ThisIsALongPassword"
 VOLUMES="/mnt/disk{1...12}"
 HOST="localhost"
 
@@ -90,8 +90,7 @@ function StartServices
 
 function InstallMC
 {
-    echo "Install MC [...]"
-    cd ~
+    echo "Install MC, this may take a while [...]"
     wget -q "https://dl.min.io/client/mc/release/linux-amd64/mc"
     chmod +x mc
     echo -e "Install MC [${GREEN}+${NC}]"
