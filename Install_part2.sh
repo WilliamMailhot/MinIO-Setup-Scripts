@@ -29,10 +29,9 @@ function Banner
 
 function CreateCertFolder
 {
-    echo "Create certificate Folder and set permissions [...]"
-    sudo mkdir -p ~/../minio/.minio/certs
-    sudo chown -R minio-user:minio-user ~/../minio/
-    echo -e "Create certificate Folder and set permissions [${GREEN}+${NC}]"
+    echo "Create certificate Folder [...]"
+    sudo mkdir -p /home/minio/.minio/certs
+    echo -e "Create certificate Folder [${GREEN}+${NC}]"
     echo -e "\n"
 }
 
@@ -64,9 +63,17 @@ function DownloadCertGen
 function GenerateCerts
 {
     echo "Generate Certificates [...]"
-    cd ~/../minio/.minio/certs
+    cd /home/minio/.minio/certs
     certgen -host $HOST
     echo -e "Generate Certificates [${GREEN}+${NC}]"
+    echo -e "\n"
+}
+
+function SetPermissions
+{
+    echo "Set Certificate Permissions [...]"
+    sudo chown -R minio-user:minio-user /home/minio/
+    echo -e "Set Certificate Permissions [${GREEN}+${NC}]"
     echo -e "\n"
 }
 
@@ -84,8 +91,9 @@ function StartServices
 function InstallMC
 {
     echo "Install MC [...]"
-    curl https://dl.min.io/client/mc/release/linux-amd64/mc --create-dirs -o ~/minio-binaries/mc
-    chmod +x ~/minio-binaries/mc
+    cd ~
+    wget -q "https://dl.min.io/client/mc/release/linux-amd64/mc"
+    chmod +x mc
     echo -e "Install MC [${GREEN}+${NC}]"
     echo -e "\n"
 }
@@ -101,6 +109,7 @@ CreateCertFolder
 CreateEnvFile
 DownloadCertGen
 GenerateCerts
+SetPermissions
 StartServices
 InstallMC
 Done
