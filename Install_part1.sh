@@ -75,17 +75,17 @@ function SetupFSTAB
 {
     echo "Setup ftstab disk mounting [...]"
     echo "LABEL=DISK1 /mnt/disk1 xfs defaults,noatime 0 2 " | sudo tee -a /etc/fstab
-    echo "LABEL=DISK2 /mnt/disk1 xfs defaults,noatime 0 2 " | sudo tee -a /etc/fstab
-    echo "LABEL=DISK3 /mnt/disk1 xfs defaults,noatime 0 2 " | sudo tee -a /etc/fstab
-    echo "LABEL=DISK4 /mnt/disk1 xfs defaults,noatime 0 2 " | sudo tee -a /etc/fstab
-    echo "LABEL=DISK5 /mnt/disk1 xfs defaults,noatime 0 2 " | sudo tee -a /etc/fstab
-    echo "LABEL=DISK6 /mnt/disk1 xfs defaults,noatime 0 2 " | sudo tee -a /etc/fstab
-    echo "LABEL=DISK7 /mnt/disk1 xfs defaults,noatime 0 2 " | sudo tee -a /etc/fstab
-    echo "LABEL=DISK8 /mnt/disk1 xfs defaults,noatime 0 2 " | sudo tee -a /etc/fstab
-    echo "LABEL=DISK9 /mnt/disk1 xfs defaults,noatime 0 2 " | sudo tee -a /etc/fstab
-    echo "LABEL=DISK10 /mnt/disk1 xfs defaults,noatime 0 2 " | sudo tee -a /etc/fstab
-    echo "LABEL=DISK11 /mnt/disk1 xfs defaults,noatime 0 2 " | sudo tee -a /etc/fstab
-    echo "LABEL=DISK12 /mnt/disk1 xfs defaults,noatime 0 2 " | sudo tee -a /etc/fstab
+    echo "LABEL=DISK2 /mnt/disk2 xfs defaults,noatime 0 2 " | sudo tee -a /etc/fstab
+    echo "LABEL=DISK3 /mnt/disk3 xfs defaults,noatime 0 2 " | sudo tee -a /etc/fstab
+    echo "LABEL=DISK4 /mnt/disk4 xfs defaults,noatime 0 2 " | sudo tee -a /etc/fstab
+    echo "LABEL=DISK5 /mnt/disk5 xfs defaults,noatime 0 2 " | sudo tee -a /etc/fstab
+    echo "LABEL=DISK6 /mnt/disk6 xfs defaults,noatime 0 2 " | sudo tee -a /etc/fstab
+    echo "LABEL=DISK7 /mnt/disk7 xfs defaults,noatime 0 2 " | sudo tee -a /etc/fstab
+    echo "LABEL=DISK8 /mnt/disk8 xfs defaults,noatime 0 2 " | sudo tee -a /etc/fstab
+    echo "LABEL=DISK9 /mnt/disk9 xfs defaults,noatime 0 2 " | sudo tee -a /etc/fstab
+    echo "LABEL=DISK10 /mnt/disk10 xfs defaults,noatime 0 2 " | sudo tee -a /etc/fstab
+    echo "LABEL=DISK11 /mnt/disk11 xfs defaults,noatime 0 2 " | sudo tee -a /etc/fstab
+    echo "LABEL=DISK12 /mnt/disk12 xfs defaults,noatime 0 2 " | sudo tee -a /etc/fstab
     echo -e "Setup ftstab disk mounting [${GREEN}+${NC}]"
     echo -e "\n"
 }
